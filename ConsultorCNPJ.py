@@ -14,7 +14,7 @@ menu = """\033[1;36m
  | \__/\ (_) | | | \__ \ |_| | | || (_) | |  | \__/\| |\  || |  /\__/ /
   \____/\___/|_| |_|___/\__,_|_|\__\___/|_|   \____/\_| \_/\_|  \____/ 
 
-Powered by Adriel Freud\n\n\n033[1;m"""
+Powered by Adriel Freud\n"""
 
 headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 6.3; WOW64; rv:54.0) Gecko/20100101 Firefox/54.0'}
 
@@ -25,21 +25,21 @@ def consultar(cnpj):
 	if code == 200:
 		html = req.text
 		receita = json.loads(html)
-		print("\033[31mAtividade Principal: %s\033[1;m"%receita['atividade_principal'][0]['text'])
-		print("\033[31mNome: %s\033[1;m"%receita['nome'])
-		print("\033[31mComplemento: %s\033[1;m"%receita['complemento'])
-		print("\033[31mUF: %s\033[1;m"%receita['uf'])
-		print("\033[31mTelefone: %s\033[1;m"%receita['telefone'])
-		print("\033[31mEmail: %s\033[1;m"%receita['email'])
-		print("\033[31m(QSA) Nome: %s\033[1;m"%receita['qsa'][0]['nome'])
-		print("\033[31m(QSA) Nome: %s\033[1;m"%receita['qsa'][1]['nome'])
-		print("\033[31mSituacao: %s\033[1;m"%receita['situacao'])
-		print("\033[31mBairro: %s\033[1;m"%receita['bairro'])
-		print("\033[31mNumero: %s\033[1;m"%receita['numero'])
-		print("\033[31mCEP: %s\033[1;m"%receita['cep'])
-		print("\033[31mMunicipio: %s\033[1;m"%receita['municipio'])
-		print("\033[31mCNPJ: %s\033[1;m"%receita['cnpj'])
-		print("\033[31mStatus: %s\033[1;m"%receita['status'])
+		print("\033[31mAtividade Principal: %s"%receita['atividade_principal'][0]['text'])
+		print("\033[31mNome: %s"%receita['nome'])
+		print("\033[31mComplemento: %s"%receita['complemento'])
+		print("\033[31mUF: %s"%receita['uf'])
+		print("\033[31mTelefone: %s"%receita['telefone'])
+		print("\033[31mEmail: %s"%receita['email'])
+		print("\033[31m(QSA) Nome: %s"%receita['qsa'][0]['nome'])
+		print("\033[31m(QSA) Nome: %s"%receita['qsa'][1]['nome'])
+		print("\033[31mSituacao: %s"%receita['situacao'])
+		print("\033[31mBairro: %s"%receita['bairro'])
+		print("\033[31mNumero: %s"%receita['numero'])
+		print("\033[31mCEP: %s"%receita['cep'])
+		print("\033[31mMunicipio: %s"%receita['municipio'])
+		print("\033[31mCNPJ: %s"%receita['cnpj'])
+		print("\033[31mStatus: %s"%receita['status'])
 	else:
 		print("\033[31m[!] Error ao Requisitar o Site!\n\033[1;m")
 
