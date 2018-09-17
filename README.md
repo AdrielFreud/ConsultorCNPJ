@@ -1,2 +1,2 @@
 # ConsultorCNPJ
-Consultor Receita federal CPNJ
+Consultor Receita federal CNPJ
