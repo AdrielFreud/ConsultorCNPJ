@@ -7,22 +7,32 @@
 import requests
 import json
 import argparse
+import sys
 
-parse = argparse.ArgumentParser(description="CPNJ for Get Informations!")
+parse = argparse.ArgumentParser(description="CNPJ for Get Informations!")
 parse.add_argument("-c", "--cnpj", help="Url for get Informations! ")
 args = parse.parse_args()
 
-menu = """\033[1;36m
+menu = r"""\033[1;36m
   _____                       _ _             _____  _   _ ______  ___ 
  /  __ \                     | | |           /  __ \| \ | || ___ \|_  |
  | /  \/ ___  _ __  ___ _   _| | |_ ___  _ __| /  \/|  \| || |_/ /  | |
  | |    / _ \| '_ \/ __| | | | | __/ _ \| '__| |    | . ` ||  __/   | |
  | \__/\ (_) | | | \__ \ |_| | | || (_) | |  | \__/\| |\  || |  /\__/ /
   \____/\___/|_| |_|___/\__,_|_|\__\___/|_|   \____/\_| \_/\_|  \____/ 
-
 Powered by Adriel Freud\n"""
 
 headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 6.3; WOW64; rv:54.0) Gecko/20100101 Firefox/54.0'}
+
+def export_json(cnpj):
+	url = 'https://www.receitaws.com.br/v1/cnpj/{0}'.format(cnpj)
+	req = requests.get(url, headers=headers)
+	code = req.status_code
+	if code == 200:
+		html = req.text
+		with open('file1.json', 'w') as w:
+			w.write(html.encode('utf-8'))
+			w.close()
 
 def consultar(cnpj):
 	url = 'https://www.receitaws.com.br/v1/cnpj/{0}'.format(cnpj)
@@ -30,8 +40,8 @@ def consultar(cnpj):
 	code = req.status_code
 	if code == 200:
 		html = req.text
-		receita = json.loads(html)
-		print("\033[31mAtividade Principal: %s"%receita['atividade_principal'][0]['text'])
+		receita = json.loads(html.encode('utf-8'))
+		#print("\033[31mAtividade Principal: %s"%receita['atividade_principal'][0]['text'])
 		print("\033[31mNome: %s"%receita['nome'])
 		print("\033[31mComplemento: %s"%receita['complemento'])
 		print("\033[31mUF: %s"%receita['uf'])
@@ -51,7 +61,9 @@ def consultar(cnpj):
 
 if args.cnpj:
 	print(menu)
+	export_json(args.cnpj)
 	consultar(args.cnpj)
+
 else:
 	print(menu)
 	parse.print_help()
