@@ -27,7 +27,7 @@
  ## Dowloand
 Baixe diretamente do github com:
  - git clone https://github.com/AdrielFreud/ConsultorCNPJ.git
- - ou [Click-aqui](/AdrielFreud/ConsultarCNPJ/archive/master.zip)  
+ - ou [Click-aqui](.zip)  
 
 
 ## Uso
