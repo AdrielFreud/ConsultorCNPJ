@@ -31,7 +31,7 @@ def export_json(cnpj):
 	if code == 200:
 		html = req.text
 		with open('file1.json', 'w') as w:
-			w.write(html.encode('utf-8'))
+			w.write(str(html.encode('utf-8')))
 			w.close()
 
 def consultar(cnpj):
