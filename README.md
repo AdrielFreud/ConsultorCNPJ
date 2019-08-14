@@ -19,6 +19,7 @@
 - Caso você encontrar um bug [Click-aqui](https://github.com/AdrielFreud/ConsultorCNPJ/issues/new) e crie um issue para eu corrijir o bug.
 
 ## Imagem
+![photo]()
 
 ## Características
   - Consulta CNPJ.
