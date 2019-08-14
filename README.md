@@ -1,4 +1,4 @@
-## SrUnEncrypt by SrBlue
+## AdrielFreud
 
 ![](https://img.shields.io/badge/ConsultarCNPJ-v1.0-blue?style=flat&logo=appveyor)
 ![](https://img.shields.io/badge/plataforma-win32--win64--linux64--linux32-blue?style=flat&logo=appveyor)
@@ -27,7 +27,7 @@
  ## Dowloand
 Baixe diretamente do github com:
  - git clone https://github.com/AdrielFreud/ConsultorCNPJ.git
- - ou [Click-aqui](/AdrielFreud/ConsultorCNPJ.git) 
+ - ou [Click-aqui](/AdrielFreud/ConsultarCNPJ/archive/master.zip)  
 
 
 ## Uso
