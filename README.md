@@ -4,8 +4,7 @@
 ![](https://img.shields.io/badge/plataforma-win32--win64--linux64--linux32-blue?style=flat&logo=appveyor)
 ![](https://img.shields.io/badge/python-3.x.x-blue)
 
- - Esse script utiliza uma wordlist que ler ela linha em linha com rapidez e a 
- - tranformando em sua criptografia, no mesmo tempo ele testa a sua hash com a hash criada para verificar se são iguais.
+ - O Script faz a busca em uma base de dados e tras informações sobre seu CNPJ informado.
  
  ```python
  if cnpj <= 20:
