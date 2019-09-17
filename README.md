@@ -15,7 +15,7 @@
 ```
 
 ## AVISO
-- Caso você encontrar um bug [Click-aqui](https://github.com/AdrielFreud/ConsultorCNPJ/issues/new) e crie um issue para eu corrijir o bug.
+- Caso você encontrar um bug [Click-aqui](https://github.com/AdrielFreud/ConsultorCNPJ/issues/new) crie um issue para eu corrigi-lo.
 
 ## Imagem
 ![photo]()
@@ -24,7 +24,7 @@
   - Consulta CNPJ.
   - Very Simple and Fast.
  
- ## Dowloand
+ ## Download
 Baixe diretamente do github com:
  - git clone https://github.com/AdrielFreud/ConsultorCNPJ.git
  - ou https://github.com/AdrielFreud/ConsultorCNPJ/archive/master.zip
